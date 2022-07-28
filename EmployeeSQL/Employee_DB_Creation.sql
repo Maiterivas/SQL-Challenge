@@ -1,10 +1,10 @@
 -- Dropping Tables if they exist to avoid errors when rerunning query
-DROP TABLE if exists departments;
-DROP TABLE if exists dept_emp;
-DROP TABLE if exists dept_manager;
-DROP TABLE if exists employees;
-DROP TABLE if exists salaries;
-DROP TABLE if exists titles;
+DROP TABLE if exists departments CASCADE;
+DROP TABLE if exists dept_emp CASCADE;
+DROP TABLE if exists dept_manager CASCADE;
+DROP TABLE if exists employees CASCADE;
+DROP TABLE if exists salaries CASCADE;
+DROP TABLE if exists titles CASCADE;
 
 
 --Making departments table for later data import
@@ -27,7 +27,7 @@ CREATE TABLE employees(
 	birth_date DATE NOT NULL,
 	first_name VARCHAR NOT NULL,
 	last_name VARCHAR NOT NULL,
-	gender VARCHAR NOT NULL,
+	sex VARCHAR NOT NULL,
 	hire_date DATE NOT NULL
 );
 
@@ -56,5 +56,3 @@ CREATE TABLE salaries(
 	salary INTEGER NOT NULL,
 	FOREIGN KEY(emp_no) REFERENCES employees(emp_no)
 );
-
-

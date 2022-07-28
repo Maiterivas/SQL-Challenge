@@ -23,7 +23,7 @@ emp_title_id VARCHAR FK >- titles.title_id
 birth_date DATE
 first_name VARCHAR
 last_name VARCHAR
-gender VARCHAR
+sex VARCHAR
 hire_date DATE
 
 
